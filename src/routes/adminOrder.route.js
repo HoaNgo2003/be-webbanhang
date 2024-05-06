@@ -7,5 +7,5 @@ router.put("/:orderId/confirmed", authenticate, orderController.confirmOrders);
 router.put("/:orderId/ship", authenticate, orderController.shipOrders);
 router.put("/:orderId/deliver", authenticate, orderController.deliveryOrders);
 router.put("/:orderId/cancel", authenticate, orderController.cancelOrder);
-router.put("/:orderId/delete", authenticate, orderController.deleteOrder);
+router.delete("/:orderId/delete", authenticate, orderController.deleteOrder);
 module.exports= router;

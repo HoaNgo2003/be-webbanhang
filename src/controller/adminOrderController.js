@@ -49,6 +49,7 @@ const cancelOrder = async(req, res)=>{
 }
 const deleteOrder = async(req, res)=>{
     const orderId = req.params.orderId;
+    console.log(req.params)
     try {
         const orders = await orderService.deleteOrder(orderId);
         return res.status(200).send(orders);
